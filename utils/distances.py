@@ -4,3 +4,6 @@ def manhattan(a, b):
 
     distance = d_x + d_y
     return distance
+def euclidean(a, b):
+    def euclidean(a, b):
+    pass
