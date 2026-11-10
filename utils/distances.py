@@ -1,15 +1,12 @@
-import math
+def minkowski(a, b, p):
+    d_x = abs(b[0] - a[0])
+    d_y = abs(b[1] - a[1])
+    return (d_x ** p + d_y ** p) ** (1 / p)
 
 
 def manhattan(a, b):
-    d_x = abs(b[0] - a[0])
-    d_y = abs(b[1] - a[1])
-
-    distance = d_x + d_y
-    return distance
+    return minkowski(a, b, 1)
 
 
 def euclidean(a, b):
-    d_x = b[0] - a[0]
-    d_y = b[1] - a[1]
-    return math.sqrt(d_x ** 2 + d_y ** 2)
+    return minkowski(a, b, 2)
